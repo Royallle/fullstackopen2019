@@ -8,7 +8,7 @@ const App = (props) => {
       votes:[0,0,0,0,0]
   })
 
-  const selectRandom = () => setSelected({...selected, index: Math.floor((Math.random() * 5))});
+  const selectRandom = () => setSelected({...selected, index: Math.floor((Math.random() * 6))});
   const setVotes = () => {
     const copy = [...selected.votes];
     copy[selected.index]+=1
