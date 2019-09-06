@@ -3,18 +3,23 @@ const baseUrl = 'http://localhost:3001/persons'
 
 const getAll = () => {
     return axios.get(baseUrl)
-  }
-  
-  const create = newObject => {
+}
+
+const createPerson = newObject => {
     return axios.post(baseUrl, newObject)
-  }
-  
-  const update = (id, newObject) => {
+}
+
+const updatePerson = (id, newObject) => {
     return axios.put(`${baseUrl}/${id}`, newObject)
-  }
+}
+
+const deletePerson = (id) => {
+    return axios.delete(`${baseUrl}/${id}`)
+}
   
-  export default { 
+export default { 
     getAll: getAll, 
-    create: create, 
-    update: update 
-  }
+    createPerson: createPerson, 
+    updatePerson: updatePerson,
+    deletePerson: deletePerson
+}

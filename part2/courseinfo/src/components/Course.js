@@ -34,7 +34,7 @@ const Content = ({parts}) => {
     return (
         <div>
             {rows()}
-            <Total total={parts.reduce((acc, cur) => acc + cur.exercises,parts[0].exercises)} />
+            <Total total={parts.reduce((acc, cur) => acc + cur.exercises,0)} />
         </div>
     )
 }
