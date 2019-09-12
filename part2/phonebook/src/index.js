@@ -78,10 +78,11 @@ const PersonForm = ({persons,setPersons,setNotificationMessage}) => {
         setNewName('');       
         setNewNumber('');
         setNotificationMessage({message:'Added '+personObject.name,style:'notification-ok'})
-      })     
+      }).catch(error => {
+        setNotificationMessage({message:error.response.data.error,style:'notification-error'})
+      })   
     };
-    
-}  
+  }  
 
 
   return (
